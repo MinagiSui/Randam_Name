@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Shout at the center of the world -result";
+    var length = ViewData["number"];
+}
+
+<div class="text-center">
+    <h3 class="display-4">世界の中心で名前を叫ぶ</h3>
+</div>
+
+<form method="post">
+    <div class="format_type" >
+        <input type="radio" id="hira" value="hira" name="format"><label for="hira">ひらがな</label>
+        <input type="radio" id="kata" value="=kata" name="format"><label for="kata">カタカナ</label>
+        <input type="radio" id="big" value="big" name="format"><label for="big">アルファベット 大文字</label>
+        <input type="radio" id="small" value="small" name="format"><label for="small">アルファベット 小文字</label>
+        <input type="radio" id="all" value="all" name="format"><label for="all">全部</label>
+    </div>
+    <input type="number" name="number" min="1" max="20" required class="input_number" />@length
+    <input type="submit" value="作成" class="create_btn" />
+</form>
+
+<p class="name_result">@ViewData["name_result"]</p>
