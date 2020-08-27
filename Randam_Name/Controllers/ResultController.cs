@@ -13,6 +13,7 @@ namespace Randam_Name.Controllers
         {
             string format = Request.Form["format"];
             int name_length = int.Parse(Request.Form["number"]);
+            ViewData["length"] = name_length;
 
             name_create name_creater = new name_create();
             ViewData["name_result"] = name_creater.output_name(format,name_length);
